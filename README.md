@@ -58,7 +58,7 @@
         <!-- Header -->
         <header class="text-center mb-8">
             <div class="flex items-center justify-between">
-                <img src="https://imgur.com/a/8qEvB6x" alt="DepEd Negros Island Region Logo" class="h-24 mr-4">
+                <img src="https://imgur.com/a/8qEvB6x">
                 <div class="text-center flex-grow">
                     <h1 class="text-3xl font-bold text-gray-900 mb-2">DEPARTMENT OF EDUCATION - NEGROS ISLAND REGION</h1>
                     <h2 class="text-xl font-medium text-blue-800">Legal Section - Complaint Inventory System</h2>
