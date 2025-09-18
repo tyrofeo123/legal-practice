@@ -1,5 +1,4 @@
 [check.html](https://github.com/user-attachments/files/22401249/check.html)
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">![NIR logo](https://github.com/user-attachments/assets/424349b8-8ff2-4504-998d-f05f9c778b69)
