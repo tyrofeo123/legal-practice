@@ -1,16 +1,20 @@
+[check.html](https://github.com/user-attachments/files/22401249/check.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">![NIR logo](https://github.com/user-attachments/assets/424349b8-8ff2-4504-998d-f05f9c778b69)
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DepEd Legal Section - Complaint Inventory System</title>
+    <title>DepEd Legal Section - Complaint Inventory System</title>![deped logo](https://github.com/user-attachments/assets/06fa6d11-ed96-4b0e-a2d0-b893f07a34c9)
+
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Include Chart.js library for creating graphs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-image: url("1b57fed7-3de8-4009-aac6-9e821635db67.jpg");
+            background-image: url("1b57fed7-3de8-4009-aac6-9e821635db67.jpg");![BACKGROUND 1](https://github.com/user-attachments/assets/e35b445d-bf54-44a5-972c-ca6298a3ac3b)
+
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
