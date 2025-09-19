@@ -7,10 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Include Chart.js library for creating graphs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Firebase SDK Imports -->
-    <script type="module" src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -394,10 +390,6 @@
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
         const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
         const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        const auth = getAuth(app);
 
         // DOM elements
         const complaintsTableBody = document.getElementById('complaintsTableBody');
@@ -806,29 +798,38 @@
         });
 
         // Initialize App
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                userId = user.uid;
-                console.log("Authenticated as:", userId);
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
 
-                // Unsubscribe from previous listeners if they exist
-                if (unsubscribeFromComplaints) {
-                    unsubscribeFromComplaints();
-                }
-                if (unsubscribeFromProfile) {
-                    unsubscribeFromProfile();
-                }
+        window.onload = function() {
+            onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    userId = user.uid;
+                    console.log("Authenticated as:", userId);
 
-                setupFirestoreListeners();
-                setupProfileListener(userId);
-            } else {
-                console.log("Not authenticated, signing in anonymously...");
-                signInAnonymously(auth).catch((error) => {
-                    console.error("Anonymous sign-in failed:", error);
-                    showModal('Authentication Error', 'Failed to sign in. Please try again later.');
-                });
-            }
-        });
+                    // Unsubscribe from previous listeners if they exist
+                    if (unsubscribeFromComplaints) {
+                        unsubscribeFromComplaints();
+                    }
+                    if (unsubscribeFromProfile) {
+                        unsubscribeFromProfile();
+                    }
+
+                    setupFirestoreListeners();
+                    setupProfileListener(userId);
+                } else {
+                    console.log("Not authenticated, signing in anonymously...");
+                    try {
+                        await signInAnonymously(auth);
+                    } catch (error) {
+                        console.error("Anonymous sign-in failed:", error);
+                        showModal('Authentication Error', 'Failed to sign in. Please try again later.');
+                    }
+                }
+            });
+            showTab('dashboard');
+        };
 
     </script>
 </body>
