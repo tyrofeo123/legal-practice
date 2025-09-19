@@ -57,7 +57,7 @@
         <!-- Header -->
         <header class="text-center mb-8">
             <div class="flex flex-col sm:flex-row items-center justify-between">
-                <img src="C:\Users\TyronVincentTrofeo\Downloads\deped logo.jpg">
+                <img src="[C:\Users\TyronVincentTrofeo\Downloads\deped logo.jpg](https://github.com/tyrofeo123/legal-practice/blob/main/deped%20logo.jpg?raw=true)">
                 <div class="text-center flex-grow mt-4 sm:mt-0">
                     <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">DEPARTMENT OF EDUCATION NEGROS ISLAND REGION</h1>
                     <h2 class="text-lg sm:text-xl font-medium text-blue-800">Office of the Regional Director - Legal Unit</h2>
