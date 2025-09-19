@@ -57,12 +57,12 @@
         <!-- Header -->
         <header class="text-center mb-8">
             <div class="flex flex-col sm:flex-row items-center justify-between">
-                <img src="https://storage.googleapis.com/deped_logos/deped_logo_official.png" alt="DepEd Logo" class="h-24">
+                <img src="C:\Users\TyronVincentTrofeo\Downloads\deped logo.jpg">
                 <div class="text-center flex-grow mt-4 sm:mt-0">
                     <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">DEPARTMENT OF EDUCATION NEGROS ISLAND REGION</h1>
                     <h2 class="text-lg sm:text-xl font-medium text-blue-800">Office of the Regional Director - Legal Unit</h2>
                 </div>
-                <img src="https://storage.googleapis.com/deped_logos/deped_negros_island_region_logo.png" alt="NIR Logo" class="h-24 mt-4 sm:mt-0">
+                <img src="C:\Users\TyronVincentTrofeo\Downloads\NIR logo.jpg">
             </div>
         </header>
 
